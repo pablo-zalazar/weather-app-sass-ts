@@ -44,6 +44,10 @@ export const actionSetCity = (search: string) => {
         const { data } = await axios.get(
           `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=${process.env.REACT_APP_API_KEY}`
         );
+
+        if (data.length < 1) {
+          throw `${search} not found`;
+        }
         const {
           lat,
           lon,
@@ -59,7 +63,7 @@ export const actionSetCity = (search: string) => {
         await dispatch(setCity({ lat, lon, name }));
       }
     } catch (e) {
-      console.log(e);
+      throw e;
     }
   };
 };

@@ -3,7 +3,7 @@ import { useAppDispatch } from "../../store/hooks";
 import { actionSetCity } from "../../store/slices/weatherSlice";
 import { AiOutlineSearch } from "react-icons/ai";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContent } from "react-toastify";
 
 export interface HeaderInterface {}
 
