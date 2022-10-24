@@ -1,0 +1,8 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.nextHours {
+  padding: 20px;
+  @include m.flex(row, space-around, center, 10px);
+  flex-wrap: wrap;
+}

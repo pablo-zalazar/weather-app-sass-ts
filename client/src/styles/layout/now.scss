@@ -1,0 +1,40 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.now {
+  border-bottom: 1px solid black;
+  padding: 20px;
+  @include m.flex(column, center, center, 20px);
+
+  & .data {
+    @include m.flex(column, center, center, 5px);
+  }
+
+  & .icon {
+    @include m.flex(column, center, center, 0);
+  }
+
+  @include m.tablet {
+    @include m.flex(row, space-between, center, 0);
+    & .data {
+      @include m.flex(column, space-between, flex-start, 10px);
+    }
+  }
+
+  & h2 {
+    font-size: v.$title;
+  }
+
+  & h3 {
+    font-size: v.$sub_title;
+  }
+
+  & p {
+    font-size: v.$text;
+    font-weight: 400;
+  }
+
+  & span {
+    font-size: 22px;
+  }
+}

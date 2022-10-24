@@ -1,0 +1,8 @@
+@use "variables" as v;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: v.$main_font;
+}

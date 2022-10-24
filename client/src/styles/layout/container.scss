@@ -1,0 +1,27 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.container {
+  min-height: calc(100vh - 100px);
+  background-color: v.$bg_page;
+  padding: 50px 5vw;
+  color: #fff;
+  @include m.flex(row, center, flex-start, 30px);
+
+  & .loading {
+    background-color: v.$bg_page;
+    @include m.flex(row, center, center, 0);
+  }
+
+  & .content {
+    width: 100%;
+    max-width: 700px;
+    background-color: v.$bg_card;
+    border-radius: 25px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  @include m.tablet {
+    min-height: calc(100vh - 50px);
+  }
+}

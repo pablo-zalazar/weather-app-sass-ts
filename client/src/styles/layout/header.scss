@@ -1,0 +1,40 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.header {
+  height: 100px;
+  padding: 20px;
+  background-color: rgba(72, 72, 72, 1);
+  @include m.flex(column, center, center, 10px);
+
+  @include m.tablet {
+    height: 50px;
+    @include m.flex(row, space-between, center, 10px);
+  }
+
+  & h1 {
+    color: white;
+    margin: 0;
+  }
+
+  & form {
+    @include m.flex(row, center, center, 5px);
+
+    & input {
+      padding: 5px;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+    }
+
+    & button {
+      padding: 5px;
+      border: none;
+      border-radius: 10px;
+      @include m.flex(row, center, center);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

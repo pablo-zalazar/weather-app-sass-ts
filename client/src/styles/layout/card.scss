@@ -1,0 +1,17 @@
+@use "../base/mixins" as m;
+@use "../base/variables" as v;
+
+.card {
+  border-radius: 25px;
+  padding: 20px;
+  @include m.flex(column, center, center, 10px);
+
+  & .icon {
+    @include m.flex(column, center, center, 5px);
+
+    & img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
